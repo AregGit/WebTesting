@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form>
+
+  <p align="center"><img src="TestingAutomation.png"></p>
+	
+  <br>
+  <br>
+  <br>
+  <h1 style="text-align:center;"> Hello from testing page!!! </h1>
+  <br>
+
+  <form >
+  	<fieldset>
+  	<hr>
+  		<legend align="left">Pleas input your login and password:</legend>
+		<font color="red"><p id="er" align="center"></p></font>
+  		<table align="center">
+			<tr>
+				<td>Login:</td>
+				<td><input type="text" size="30" id=lg></td>
+			</tr>
+			<tr>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="text" size="30" id=ps></td>
+			</tr>
+			<tr>
+				<td><br><button type="button" onclick="onSubmitClick()">Submit</button></td>
+			</tr>
+  		</table>
+  	<hr>
+
+</form>
+
+</form>
+
+<script>
+function onSubmitClick() {
+	var l = document.getElementById("lg");
+	var p = document.getElementById("ps");
+	var e = document.getElementById("er");
+	if(l.value == "" || p.calue == "") {
+		e.innerHTML = "Error: Empty login or password"
+	} else if(l.value == "test" && p.value == "test") {
+		window.open("correct.html");
+	} else {
+		e.innerHTML = "Error: Incorrect login or password"
+	}
+}
+</script>
+
+
+</body>
+</html>
+
